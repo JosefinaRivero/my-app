@@ -1,13 +1,44 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #d3d6d9;
+    color: #222;
+}
+
+.HotelList{
+    width: 90vw;
+    max-width: 117opx;
+    margin: 5rem auto;
+    display: grid;
+    gap: 2rem;
+    
+}
+
+@media screen and (min-width: 768px){
+
+    .HotelList{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.Hotel{
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+}
+.Hotel img{
+    width: 100%;
+    object-fit: cover;
+
+
+}
+
+.Hotel h3{
+    margin-top: 1rem;
+    font-size: 1rem; 
 }
