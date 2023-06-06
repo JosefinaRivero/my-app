@@ -4,55 +4,66 @@ import ReactDOM from "react-dom/client";
 import "./index.css"
 
 
+const hotels=[
+ {
+    title:'Hotel Miami', 
+    img:"./images/hotel1.jpg",
+    id: 1,
+},
+ {
+    title:'hotel la',
+    img:"./images/hotel3.jpg",
+    id: 2,
+},
+ {
+    title:'hotel la',
+    img:"./images/hotel4.jpg",
+    id: 3,
+},
+ {
+    title:'hotel la',
+    img:"./images/hotel5.jpg",
+    id: 4,
+},
+{
+    title:'hotel la',
+    img:"./images/hotel6.jpg",
+    id: 5,
+},
+ {
+    title:'hotel la',
+    img:"./images/hotel2.jpg",
+    id: 6,
+
+},
+];
+
+
+
 const HotelList=() => {
     return (
         <section className="HotelList">
-            <Hotel title={firstHotel.title} img={firstHotel.img}/>
-            <Hotel title={secondHotel.title} img={secondHotel.img}/>
-            <Hotel title={tercerHotel.title} img={tercerHotel.img}/>
-            <Hotel title={cuartoHotel.title} img={cuartoHotel.img}/>
-            <Hotel title={quintoHotel.title} img={quintoHotel.img}/>
-            <Hotel title={sextoHotel.title} img={sextoHotel.img}/>
-           
+        {hotels.map((hotel)=>{
+        
+            return (
+                <Hotel {...hotel} key={hotel.id}/>
+            )
+        })}
         </section>
-    )
-}
-
-const firstHotel = {
-    title:'Hotel Miami', 
-    img:"./images/hotel1.jpg",
-}
-const tercerHotel = {
-    title:'hotel la',
-    img:"./images/hotel3.jpg",
-}
-const cuartoHotel = {
-    title:'hotel la',
-    img:"./images/hotel4.jpg",
-}
-const quintoHotel = {
-    title:'hotel la',
-    img:"./images/hotel5.jpg",
-}
-const sextoHotel = {
-    title:'hotel la',
-    img:"./images/hotel6.jpg",
-}
-const secondHotel = {
-    title:'hotel la',
-    img:"./images/hotel2.jpg",
-}
-
-
+    );
+};
 
 
 const Hotel = (props) => {
-    console.log(props);
     const {img, title}=props;
+    console.log(props);
 return(
+    
     <article className="Hotel">
+      
        <img src={img} alt={title} ></img> 
-       <h3>{title.toUpperCase()}</h3>
+       <h2>{title.toUpperCase()}</h2>
+      
     </article>
    
 )

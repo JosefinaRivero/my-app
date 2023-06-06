@@ -23,6 +23,7 @@ body{
 
     .HotelList{
         grid-template-columns: repeat(3, 1fr);
+      
     }
 }
 .Hotel{
@@ -41,4 +42,18 @@ body{
 .Hotel h3{
     margin-top: 1rem;
     font-size: 1rem; 
+}
+
+.Hotel button{
+
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #efba7d;
+    color: #050505;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
