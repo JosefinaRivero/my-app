@@ -1,4 +1,3 @@
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css"
@@ -19,38 +18,22 @@ const hotels=[
        id: 2,
    },
     {
-<<<<<<< HEAD
-       title:'hotel cancun',
-=======
        title:'hotel best',
->>>>>>> bb9446b8541216d50f25913c5d38064cf6ab5572
        img:"./images/hotel4.jpg",
        id: 3,
    },
     {
-<<<<<<< HEAD
-       title:'hotel las vegas',
-=======
        title:'hotel ocean',
->>>>>>> bb9446b8541216d50f25913c5d38064cf6ab5572
        img:"./images/hotel5.jpg",
        id: 4,
    },
    {
-<<<<<<< HEAD
-       title:'hotel hilton',
-=======
        title:'hotel teh beach',
->>>>>>> bb9446b8541216d50f25913c5d38064cf6ab5572
        img:"./images/hotel6.jpg",
        id: 5,
    },
     {
-<<<<<<< HEAD
-       title:'hotel texas',
-=======
        title:'hotel sun',
->>>>>>> bb9446b8541216d50f25913c5d38064cf6ab5572
        img:"./images/hotel2.jpg",
        id: 6,
    
@@ -89,4 +72,3 @@ const HotelList=() => {
 const root=ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(<HotelList/>);
-
