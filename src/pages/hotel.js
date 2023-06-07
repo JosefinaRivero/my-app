@@ -13,7 +13,7 @@ return(
       
        <img src={img} alt={title} ></img> 
        <h2>{title.toUpperCase()}</h2>
-       <button onClick={getHotel(id)}>click me</button>
+       <button onClick={getHotel(id)}>Informacion</button>
       
     </article>
    

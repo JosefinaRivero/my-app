@@ -14,27 +14,43 @@ const hotels=[
        id: 1,
    },
     {
-       title:'hotel la',
+       title:'hotel miami 2',
        img:"./images/hotel3.jpg",
        id: 2,
    },
     {
+<<<<<<< HEAD
        title:'hotel cancun',
+=======
+       title:'hotel best',
+>>>>>>> bb9446b8541216d50f25913c5d38064cf6ab5572
        img:"./images/hotel4.jpg",
        id: 3,
    },
     {
+<<<<<<< HEAD
        title:'hotel las vegas',
+=======
+       title:'hotel ocean',
+>>>>>>> bb9446b8541216d50f25913c5d38064cf6ab5572
        img:"./images/hotel5.jpg",
        id: 4,
    },
    {
+<<<<<<< HEAD
        title:'hotel hilton',
+=======
+       title:'hotel teh beach',
+>>>>>>> bb9446b8541216d50f25913c5d38064cf6ab5572
        img:"./images/hotel6.jpg",
        id: 5,
    },
     {
+<<<<<<< HEAD
        title:'hotel texas',
+=======
+       title:'hotel sun',
+>>>>>>> bb9446b8541216d50f25913c5d38064cf6ab5572
        img:"./images/hotel2.jpg",
        id: 6,
    
