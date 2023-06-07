@@ -19,22 +19,22 @@ const hotels=[
        id: 2,
    },
     {
-       title:'hotel la',
+       title:'hotel cancun',
        img:"./images/hotel4.jpg",
        id: 3,
    },
     {
-       title:'hotel la',
+       title:'hotel las vegas',
        img:"./images/hotel5.jpg",
        id: 4,
    },
    {
-       title:'hotel la',
+       title:'hotel hilton',
        img:"./images/hotel6.jpg",
        id: 5,
    },
     {
-       title:'hotel la',
+       title:'hotel texas',
        img:"./images/hotel2.jpg",
        id: 6,
    
