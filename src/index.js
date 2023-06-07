@@ -14,27 +14,27 @@ const hotels=[
        id: 1,
    },
     {
-       title:'hotel la',
+       title:'hotel miami 2',
        img:"./images/hotel3.jpg",
        id: 2,
    },
     {
-       title:'hotel la',
+       title:'hotel best',
        img:"./images/hotel4.jpg",
        id: 3,
    },
     {
-       title:'hotel la',
+       title:'hotel ocean',
        img:"./images/hotel5.jpg",
        id: 4,
    },
    {
-       title:'hotel la',
+       title:'hotel teh beach',
        img:"./images/hotel6.jpg",
        id: 5,
    },
     {
-       title:'hotel la',
+       title:'hotel sun',
        img:"./images/hotel2.jpg",
        id: 6,
    
