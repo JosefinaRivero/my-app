@@ -5,8 +5,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	. "backend/model"
-	. "backend/service"
+	. "back/model"
+	. "back/service"
 )
 
 // estructura reservas

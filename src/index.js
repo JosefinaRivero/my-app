@@ -53,6 +53,7 @@ const HotelList=() => {
 }
     return (
         <section className="HotelList">
+   
         
         {hotels.map((hotel)=>{
         
