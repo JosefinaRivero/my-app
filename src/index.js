@@ -28,7 +28,7 @@ const hotels=[
        id: 4,
    },
    {
-       title:'hotel teh beach',
+       title:'hotel the beach',
        img:"./images/hotel6.jpg",
        id: 5,
    },

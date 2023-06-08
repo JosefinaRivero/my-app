@@ -10,20 +10,143 @@ body{
   color: #222;
 }
 
+
+/*HEADER*/
+
+.headerhotel {
+  height: 100px;
+  background-color: #000000;
+  position: fixed -100px;
+  color: #ffffff;
+  padding: 0rem 7rem;
+  margin: auto;
+}
+
+.headerlogo {
+  width: 30%;
+  float: left;
+  padding: 1rem 0rem;
+}
+
+.logo {
+ width: 200px; 
+  
+}
+
+
+/*NAVIGATION BAR*/
+
+.navbar {
+  width: 65%;
+  float: right;
+  padding-top: 3rem;
+  text-align: right;
+}
+
+
+.navbar ul {
+  list-style: none;
+  display: block;
+  justify-content: flex-start;
+}
+
+.navbar li {
+  margin-left: 30px;
+  text-align: right;
+    display: inline-block;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #19C5F8;
+}
+
+
+
+
+
+/*DATAPICK*/
+
+.datahotel {
+  min-height: 100px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #cccccc;
+}
+
+.datacontent {
+  padding: 1rem 7rem;
+  margin: auto;
+}
+
+
+.datahotel input{
+  height: 30px;
+  color: #000000;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+
+.datahotel button{
+
+  display: inline-block;
+  padding: 7px 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #19C5F8;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  min-width: 160px;
+  cursor: pointer;
+}
+
+.datahotel button:hover{
+background-color: #0479A3;
+color: #ffffff;
+
+}
+
+.datacontent h3{
+  margin-right: 30px;
+}
+
+
+/* CONTENT*/
+
+
 .HotelList{
   width: 90vw;
   max-width: 117opx;
-  margin: 5rem auto;
+  margin: 4rem auto;
   display: grid;
   gap: 2rem;
   
 }
+
 
 @media screen and (max-width: 1199px) and (min-width: 769px){
 
 .HotelList{
     grid-template-columns: repeat(2, 1fr);
   
+}
+.datacontent h3{
+  display: inline;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 }
 
@@ -32,6 +155,11 @@ body{
 .HotelList{
     grid-template-columns: repeat(3, 1fr);
   
+}
+  .datacontent h3{
+  display: inline;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 }
 
@@ -42,8 +170,8 @@ body{
   border-radius: 0.7rem;
   padding: 0.5rem;
   text-align: center;
-  height: 370px;
   border: 1px solid #cccccc;
+  height: 500px;
 }
 
 .Hotel:hover{
@@ -64,8 +192,8 @@ border: 4px solid #ccc;
 }
 
 .Hotel h3{
-  margin-top: 1rem;
-  font-size: 1rem; 
+  margin-bottom: 1rem;
+  font-size: 1.5rem; 
 }
 
 .Hotel button{
@@ -94,36 +222,13 @@ color: #ffffff;
 
 
 
+/*FOOTER*/
 
+.footerhotel {
+  height: 70px;
+  background-color: #242424;
 
-/*NAVIGATION BAR*/
-
-.navbar {
-  background-color: #d12828;
-  padding: 10px;
 }
 
-.navbar {
-  background-color: #783e3e;
-  padding: 10px;
-}
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-start;
-}
 
-.navbar li {
-  margin-right: 20px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.navbar a:hover {
-  color: #000;
-}
