@@ -17,14 +17,15 @@ const HotelList = () => {
         console.log(hotel);
     }
 
-    const searchHotels = (search, from, to) => {
+   const searchHotels = (search, from, to) => {
         console.log(search)
         console.log(from)
         console.log(to)
     } 
+    
     return (
         <section className="HotelList">
-            <NavBar searchHotels={searchHotels} />
+            
             {hotels.map((hotel) => {
 
                 return (
