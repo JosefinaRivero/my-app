@@ -1,70 +1,31 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css"
-import Hotel from "./pages/hotel";
+import {LoginForm} from "./components/Authorization/LoginForm"
+import HotelList from "./pages/hotelList"
 
 
 
 
-const hotels=[
-    {
-       title:'Hotel Miami', 
-       img:"./images/hotel1.jpg",
-       id: 1,
-   },
-    {
-       title:'hotel miami 2',
-       img:"./images/hotel3.jpg",
-       id: 2,
-   },
-    {
-       title:'hotel best',
-       img:"./images/hotel4.jpg",
-       id: 3,
-   },
-    {
-       title:'hotel ocean',
-       img:"./images/hotel5.jpg",
-       id: 4,
-   },
-   {
-       title:'hotel the beach',
-       img:"./images/hotel6.jpg",
-       id: 5,
-   },
-    {
-       title:'hotel sun',
-       img:"./images/hotel2.jpg",
-       id: 6,
    
-   },
-   ];
-   
-
-
-
-
-const HotelList=() => {
+ const HotellWebSite=() => {
  
- const getHotel = (id) => {
-    const hotel =hotels.find((hotel)=> hotel.id=id)
-     console.log (hotel);
-}
-    return (
-        <section className="HotelList">
-   
-        
-        {hotels.map((hotel)=>{
-        
-        return (
-            <Hotel {...hotel} key={hotel.id} getHotel={getHotel}/>
-        )
-    })}
+    const [isAuthenticated, setIsAuthenticated] = React.useState(false);
+    const [user, setUser] = React.useState(undefined);
+    return (<section> <HotelList /></section>)
+    //    return (<section>
+    //     {!isAuthenticated ? 
+    //     <LoginForm setIsAuthenticated={setIsAuthenticated} setUser={setUser}></LoginForm> :
+    //     user.isAdmin ? <>Load admin pages</> :
+    //     <HotelList></HotelList>
+    // }
+    //    </section>
+           
+    //    );
+   };
 
-        
-        </section>
-    );
-};
+
+
 
 
 
@@ -72,4 +33,4 @@ const HotelList=() => {
 
 const root=ReactDOM.createRoot(document.getElementById('root'))
 
-root.render(<HotelList/>);
+root.render(<HotellWebSite/>);
