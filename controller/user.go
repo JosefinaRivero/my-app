@@ -41,7 +41,7 @@ func UserLogin(c *gin.Context) {
 	c.JSON(http.StatusAccepted, loginDto)
 }
 
-func InsertUser(c *gin.Context) {
+func InsertUser(c *gin.Context) { //verifica si el email ya existe , si los campos están vacios.. eso falta
 	var userDto dto.UserDto
 	err := c.BindJSON(&userDto)
 

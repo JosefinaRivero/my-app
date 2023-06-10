@@ -16,11 +16,11 @@ var (
 
 func init() {
 	// DB Connections Paramters
-	DBName := ""
-	DBUser := ""
-	DBPass := ""
+	DBName := "arqsoft"
+	DBUser := "manu"
+	DBPass := "hello"
 	//DBPass := os.Getenv("MVC_DB_PASS")
-	DBHost := ""
+	DBHost := "localhost"
 
 	// DB Connections Paramters
 	//DBName := "uccarqsoft"
