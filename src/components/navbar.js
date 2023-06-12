@@ -7,8 +7,12 @@ const Navbar = () => {
   return (
   
     <div id="header" class="headerhotel">
-        <div class="headerlogo"><img class="logo" src="../public/images/logo-sunset-hotels.png" alt="sunset hotels"/></div>
-        <div class="navbar"><ul><li><a href="#">HOME</a></li><li><a href="#">HOTELS</a></li><li><a href="#">CONTACT</a></li><li><a href="#">AREA CLIENT</a></li></ul></div>
+        <div class="headerlogo"><img class="logo" src="./images/logo-sunset-hotels.png" alt="sunset hotels"/></div>
+        <div class="navbar"><ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">CONTACT</a></li>
+          <li><a href="#">AREA CLIENT</a></li>
+          </ul></div>
     </div>
     
  
