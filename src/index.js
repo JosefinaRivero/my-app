@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css"
 import {LoginForm} from "./components/Authorization/LoginForm"
 import HotelList from "./pages/hotelList"
+import DatePicker from "./components/search"
+import NavBar from "./components/navbar"
 
 
 
@@ -12,7 +14,10 @@ import HotelList from "./pages/hotelList"
  
     const [isAuthenticated, setIsAuthenticated] = React.useState(false);
     const [user, setUser] = React.useState(undefined);
-    return (<section> <HotelList /></section>)
+    return (<section>
+      <NavBar/>
+      <DatePicker/>
+       <HotelList /></section>)
     //    return (<section>
     //     {!isAuthenticated ? 
     //     <LoginForm setIsAuthenticated={setIsAuthenticated} setUser={setUser}></LoginForm> :

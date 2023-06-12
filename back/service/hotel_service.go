@@ -1,8 +1,8 @@
 package service
 
 import (
-	. "backend/data_access"
-	. "backend/model"
+	. "back/data_access"
+	. "back/model"
 	"database/sql"
 )
 

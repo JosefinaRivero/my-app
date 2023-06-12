@@ -1,19 +1,17 @@
 import React from 'react';
+import "../index.css"
 
 
 
 const Navbar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/login">Iniciar sesión</a>
-        </li>
-      </ul>
-    </nav>
+  
+    <div id="header" class="headerhotel">
+        <div class="headerlogo"><img class="logo" src="../public/images/logo-sunset-hotels.png" alt="sunset hotels"/></div>
+        <div class="navbar"><ul><li><a href="#">HOME</a></li><li><a href="#">HOTELS</a></li><li><a href="#">CONTACT</a></li><li><a href="#">AREA CLIENT</a></li></ul></div>
+    </div>
+    
+ 
   );
 };
 
