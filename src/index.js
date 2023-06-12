@@ -5,6 +5,7 @@ import {LoginForm} from "./components/Authorization/LoginForm"
 import HotelList from "./pages/hotelList"
 import DatePicker from "./components/search"
 import NavBar from "./components/navbar"
+import Footer from "./components/footer";
 
 
 
@@ -17,7 +18,9 @@ import NavBar from "./components/navbar"
     return (<section>
       <NavBar/>
       <DatePicker/>
-       <HotelList /></section>)
+       <HotelList />
+       <Footer/>
+       </section>)
     //    return (<section>
     //     {!isAuthenticated ? 
     //     <LoginForm setIsAuthenticated={setIsAuthenticated} setUser={setUser}></LoginForm> :
