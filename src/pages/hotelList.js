@@ -2,7 +2,6 @@ import  React from "react"
 import { hotels } from "../data/hotels"
 import  Hotel  from "./hotel"
 import {getHotels} from "../api/hotels"
-import NavBar from "../components/navbar"
 
 const HotelList = () => {
 

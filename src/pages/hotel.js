@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "../components/modal";
 import { useState } from "react";
-
+import styles from "./hotel.module.css";
 
 
 

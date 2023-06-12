@@ -1,7 +1,6 @@
 import React from "react";
-import "../index.css"
 import { RiCloseLine } from "react-icons/ri";
-
+import styles from "./Modal.module.css";
 
 
 const Modal = ({ setIsOpen }) => {
@@ -11,7 +10,7 @@ const Modal = ({ setIsOpen }) => {
         <div className={styles.centered}>
           <div className={styles.modal}>
             <div className={styles.modalHeader}>
-              <h5 className={styles.heading}>Dialog</h5>
+              <h5 className={styles.heading}>Informacion</h5>
             </div>
             <button className={styles.closeBtn} onClick={() => setIsOpen(false)}>
               <RiCloseLine style={{ marginBottom: "-3px" }} />
@@ -25,12 +24,7 @@ const Modal = ({ setIsOpen }) => {
              </div>
             <div className={styles.modalActions}>
               <div className={styles.actionsContainer}>
-                <button
-                  className={styles.cancelBtn}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Close
-                </button>
+                
               </div>
             </div>
           </div>
