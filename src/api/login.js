@@ -10,3 +10,7 @@ export const registerUser = (user) => {
 export const loginUser = (user) => {
     return invokeApi(CONFIG.BASEURL+"/user/login", "PUT", user)
 }
+
+export const addReservation = (user) => {
+    return invokeApi(CONFIG.BASEURL+"/user/register", "PUT", user)
+}

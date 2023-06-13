@@ -2,7 +2,7 @@ import React from "react";
 import Modal from "../components/modal";
 import { useState } from "react";
 import styles from "./hotel.module.css";
-//import {addReservation} from "../api/login"
+import {addReservation} from "../api/login"
 import HotelReserva from "./hotelreserva";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
@@ -29,12 +29,24 @@ return(
        Informacion
       </button >
       {isOpen && <Modal setIsOpen={setIsOpen} />}
-      <Link to="/hotel"></Link>
+
+      <button onClick={() => {
+        addReservation({}).then(result => {
+        setResult(true)
+      }).catch(result => {
+        setResult(false)
+      })}   }>Confirmar reservacion</button>
+
+      {result !== undefined && <div>
+        <p>Resultado : {result ? <div>OK</div> :<div>Error</div>}</p>
+        </div>}
+
+   
+        <Link to="/hotel"></Link>
       <Switch>
           <Route path="/:id" children={<HotelReserva />} />
         </Switch>
       
-  
     </article>
    
 )
