@@ -1,12 +1,22 @@
 package main
 
 import (
+	"my-app/app"
+	"my-app/db"
+)
+
+func main() {
+	db.StartDbEngine()
+	app.StartRoute()
+}
+
+/*
+package main
+
+import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-
-	. "back/model"
-	. "back/service"
 )
 
 // estructura reservas
@@ -34,28 +44,15 @@ var reservations = []reservation{
 	{ID: "3", IsConfirmed: false, IdHotel: "3", From: "2020-05-23", To: "2020-06-03"},
 }
 
-/*
-	GET --- listar hoteles
-	agregar un hotel
-	ver detalles de un hotel
 
-	GET --- listar reservas
-	confirmar una reserva ----------- FALTA VALIDACION
+	//GET --- listar hoteles
+	//agregar un hotel
+	//ver detalles de un hotel
+	//
+	//GET --- listar reservas
+	//confirmar una reserva ----------- FALTA VALIDACION
 
-*/
 
-func main() {
-
-	router := gin.Default()
-	router.GET("/hotels", getHotels)
-	router.GET("/hotels/:id", getHotelById)
-	router.POST("/hotels", postHotels)
-	router.GET("/reservations", getReservations)
-	router.GET("/reservations/:id", getReservationById)
-	router.POST("/reservations", postReservations)
-
-	router.Run("localhost:8080")
-}
 
 func getHotels(context *gin.Context) {
 	context.IndentedJSON(http.StatusOK, GetHotels())
@@ -71,17 +68,17 @@ func postHotels(context *gin.Context) {
 	context.IndentedJSON(http.StatusCreated, newHotel)
 }
 
-func getHotelById(context *gin.Context) {
-	//id := context.Param("id")
-	/*
-		for _, hotel := range hotels {
-			if hotel.ID == id {
-				context.IndentedJSON(http.StatusOK, hotel)
-				return
-			}
-		}
-	*/context.IndentedJSON(http.StatusNotFound, gin.H{"message": "hotel no encontrado"})
-}
+//func getHotelById(context *gin.Context) {
+//	//id := context.Param("id")
+//
+//		for _, hotel := range hotels {
+//			if hotel.ID == id {
+//				context.IndentedJSON(http.StatusOK, hotel)
+//				return
+//			}
+//		}
+//	context.IndentedJSON(http.StatusNotFound, gin.H{"message": "hotel no encontrado"})
+//}
 
 func getReservations(context *gin.Context) {
 
@@ -109,3 +106,16 @@ func postReservations(context *gin.Context) {
 	reservations = append(reservations, newReservation)
 	context.IndentedJSON(http.StatusCreated, newReservation)
 }
+func main() {
+
+	router := gin.Default()
+	router.GET("/hotels", getHotels)
+	router.GET("/hotels/:id", getHotelById)
+	router.POST("/hotels", postHotels)
+	router.GET("/reservations", getReservations)
+	router.GET("/reservations/:id", getReservationById)
+	router.POST("/reservations", postReservations)
+
+	router.Run("localhost:8080")
+}
+*/

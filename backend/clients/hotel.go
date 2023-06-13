@@ -4,11 +4,8 @@ import (
 	"my-app/model"
 	"time"
 
-	"github.com/jinzhu/gorm"
 	log "github.com/sirupsen/logrus"
 )
-
-var Db *gorm.DB
 
 //FUNCION HOTELES ->DISPONIBLES<- VER!
 

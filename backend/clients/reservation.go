@@ -3,11 +3,8 @@ package client
 import (
 	"my-app/model"
 
-	"github.com/jinzhu/gorm"
 	log "github.com/sirupsen/logrus"
 )
-
-var Db *gorm.DB
 
 // Inserta hotel en la db
 func InsertReservation(reservation model.Reservation) model.Reservation {

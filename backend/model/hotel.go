@@ -9,3 +9,4 @@ type Hotel struct {
 	RoomQuant        int     `gorm:"type:int; not null"`          //cambio
 	RoomDescription  string  `gorm:"type:varchar(500)"`           //cambio
 }
+type Hotels []Hotel

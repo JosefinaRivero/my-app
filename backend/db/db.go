@@ -1,8 +1,8 @@
 package db
 
 import (
-	"project/client"
-	"project/model"
+	"my-app/clients"
+	"my-app/model"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"

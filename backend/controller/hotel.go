@@ -2,7 +2,7 @@ package controller
 
 import (
 	"my-app/dto"
-	service "my-app/service"
+	service "my-app/services"
 	"net/http"
 	"strconv"
 

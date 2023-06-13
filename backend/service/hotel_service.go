@@ -1,9 +1,9 @@
 package service
 
 import (
-	. "back/data_access"
-	. "back/model"
 	"database/sql"
+	. "my-app/data_access"
+	. "my-app/model"
 )
 
 func GetHotels() []Hotel {
@@ -31,7 +31,7 @@ func GetHotels() []Hotel {
 	for rows.Next() {
 
 		var hot Hotel
-		if err := rows.Scan(&hot.ID, &hot.Name, &hot.Description, &hot.Price); err != nil {
+		if err := rows.Scan(&hot.Id, &hot.Name, &hot.HotelDescription, &hot.Price); err != nil {
 			return nil
 			//, fmt.Errorf("getHotels %q: %v", err)
 		}

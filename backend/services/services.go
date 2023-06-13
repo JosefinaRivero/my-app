@@ -3,7 +3,7 @@ package service
 import (
 	"errors"
 	"math"
-	"my-app/client"
+	"my-app/clients"
 	"my-app/dto"
 	"my-app/model"
 	"time"
@@ -114,9 +114,9 @@ func (s *service) InsertHotel(hotelDto dto.HotelDto) (dto.HotelDto, error) {
 	var hotel model.Hotel
 
 	hotel.Name = hotelDto.Name
-	hotel.Description = hotelDto.Description
+	hotel.HotelDescription = hotelDto.HotelDescription
 	hotel.RoomQuant = hotelDto.RoomQuant
-	hotel.RPrice = hotelDto.RPrice
+	hotel.Price = hotelDto.Price
 	hotel.RoomDescription = hotelDto.RoomDescription
 
 	hotel = client.InsertHotel(hotel)
