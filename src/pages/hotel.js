@@ -16,10 +16,9 @@ return(
       
        <img src={img} alt={title} ></img> 
        <h2>{title.toUpperCase()}</h2>
- 
        <button className={styles.primaryBtn} onClick={() => setIsOpen(true)}>
        Informacion
-      </button>
+      </button >
       {isOpen && <Modal setIsOpen={setIsOpen} />}
     </article>
    

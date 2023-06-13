@@ -4,13 +4,14 @@ import styles from "./Modal.module.css";
 
 
 const Modal = ({ setIsOpen }) => {
+ 
   return (
     <>
       <div className={styles.darkBG} onClick={() => setIsOpen(false)} />
       <div className={styles.centered}>
         <div className={styles.modal}>
           <div className={styles.modalHeader}>
-            <h5 className={styles.heading}>Dialog</h5>
+            <h5 className={styles.heading}>Informacion</h5>
           </div>
           <button className={styles.closeBtn} onClick={() => setIsOpen(false)}>
             <RiCloseLine style={{ marginBottom: "-3px" }} />
@@ -22,7 +23,7 @@ const Modal = ({ setIsOpen }) => {
 
           The third and last part will be the actions that can be performed in the modal, that is, cancel the modal in order to close it and another action (save, update, delete, etc).
            </div>
-           <div className={styles.modalImage}>IMG</div>
+           <div className={styles.modalImage}><img src="./images/hotel1.jpg" alt="hotel1"></img></div>
            <div className={styles.modalBottom}> </div>
           <div className={styles.modalActions}>
             <div className={styles.actionsContainer}>
