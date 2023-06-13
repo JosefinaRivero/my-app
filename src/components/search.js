@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import "../index.css"
 import "react-datepicker/dist/react-datepicker.css";
-import { getHotelsWithDate } from '../api/hotels';
+import { GetHotelsByIdAndDates } from '../api/hotels';
 import { useHistory,useParams } from "react-router-dom";
 const SearchBar = (props) => {
 
@@ -32,40 +32,17 @@ const SearchBar = (props) => {
           minDate={props.startDate}
         />
 
-        <button className='button' onClick={() => {
-          getHotelsWithDate(props.startDate, props.endDate).then(result => {
+        <button className='button' onClick={() =>  {
+         GetHotelsByIdAndDates(props.startDate, props.endDate).then(result => {
             props.setHotels(result)
           })
           history.push("/users");
-        }}>ENVIA</button>
+        } }>ENVIA</button>
       </div>
 
     </div>
   );
 };
 
-/*
-const DatePicker = () =>{
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(null);
-  return (
-    <>
-      <DatePicker
-        selected={startDate}
-        onChange={(date) => setStartDate(date)}
-        selectsStart
-        startDate={startDate}
-        endDate={endDate}
-      />
-      <DatePicker
-        selected={endDate}
-        onChange={(date) => setEndDate(date)}
-        selectsEnd
-        startDate={startDate}
-        endDate={endDate}
-        minDate={startDate}
-      />
-    </>
-  );
-};*/
+
 export default SearchBar;

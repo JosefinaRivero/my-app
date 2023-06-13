@@ -1,7 +1,7 @@
 
 import CONFIG from "../app.config.json"
 
-export const getHotels = () => {
+export const GetHotelsByIdAndDates = () => {
     return invokeApi(CONFIG.BASEURL+"/hotels")
 }
 

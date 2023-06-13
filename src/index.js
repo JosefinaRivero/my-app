@@ -19,8 +19,8 @@ const HotellWebSite = () => {
 
    const [isAuthenticated, setIsAuthenticated] = React.useState(false);
    const [user, setUser] = React.useState(undefined);
-   const [startDate, setStartDate] = React.useState(new Date("2014/02/08"));
-   const [endDate, setEndDate] = React.useState(new Date("2014/02/10"));
+   const [startDate, setStartDate] = React.useState(new Date("2023/02/08"));
+   const [endDate, setEndDate] = React.useState(new Date("2023/02/10"));
    const [hotels, setHotels] = React.useState([]);
    return (
       <Router>

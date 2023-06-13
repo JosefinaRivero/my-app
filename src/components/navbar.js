@@ -11,13 +11,13 @@ const Navbar = () => {
         <div class="headerlogo"><img class="logo" src="./images/logo-sunset-hotels.png" alt="sunset hotels"/></div>
         <div class="navbar"><ul>
         <li>
-              <Link to="/">Home</Link>
+              <Link to="/home">Inicio</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about">Contacto</Link>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <Link to="/users">Usuario</Link>
             </li>
           {/* <li><a href="#">HOME</a></li>
           <li><a href="#">CONTACT</a></li>
