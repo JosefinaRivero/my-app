@@ -2,6 +2,7 @@ package client
 
 import (
 	"my-app/model"
+	"time"
 
 	"github.com/jinzhu/gorm"
 	log "github.com/sirupsen/logrus"
@@ -40,6 +41,15 @@ func GetHotels() model.Hotels {
 	Db.Find(&hotels)
 
 	log.Debug("Hoteles Disponibles: ", hotels)
+
+	return hotels
+}
+
+func GetHotelsByIdAndDates(id int, startDate time.Time, endDate time.Time) model.Hotels {
+	var hotels model.Hotels
+	Db.Where("id = ? AND fecha_inicio <= ? AND fecha_fin >= ?", id, endDate, startDate).Find(&hotels)
+
+	log.Debug("Hoteles Disponibles por ID y Fechas: ", hotels)
 
 	return hotels
 }
