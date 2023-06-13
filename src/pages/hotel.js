@@ -2,13 +2,14 @@ import React from "react";
 import Modal from "../components/modal";
 import { useState } from "react";
 import styles from "./hotel.module.css";
-
+import {addReservation} from "../api/login"
 
 
 const Hotel = (props) => {
     const {img, title, getHotel, id}=props;
    // console.log(props);
    const [isOpen, setIsOpen] = useState(false);
+   const [result, setResult] = useState(undefined);
     
 return(
     
@@ -20,6 +21,17 @@ return(
        Informacion
       </button >
       {isOpen && <Modal setIsOpen={setIsOpen} />}
+      
+      <button onClick={() => {
+        addReservation({}).then(result => {
+        setResult(true)
+      }).catch(result => {
+        setResult(false)
+      })}}>Confirmar reservacion</button>
+
+      {result !== undefined && <div>
+        <p>Resultado : {result ? <div>OK</div> :<div>Error</div>}</p>
+        </div>}
     </article>
    
 )

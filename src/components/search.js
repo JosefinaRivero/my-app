@@ -1,35 +1,45 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
 import "../index.css"
+import "react-datepicker/dist/react-datepicker.css";
+import { getHotelsWithDate } from '../api/hotels';
+import { useHistory,useParams } from "react-router-dom";
+const SearchBar = (props) => {
 
 
-const DatePicker = () => {
-
-  const [date, setDate] = useState('');
-  const dateInputRef = useRef(null);
-
-  const handleChange = (e) => {
-    setDate(e.target.value);
-  };
 
 
+  let history = useHistory();
+  let { id } = useParams();
   return (
     <div id="datepick" class="datahotel">
-        <div  class="datacontent"><h3>Reserva tu hotel</h3>
-       
-      <input
-        type="date"
-        onChange={handleChange}
-        ref={dateInputRef}
-      />  
-      <input
-      type="date"
-      onChange={handleChange}
-      ref={dateInputRef}
-    />
-   
-   <button>ENVIA</button>
-       </div>
-     
+      <div>Id : {id}</div>
+      <div class="datacontent"><h3>Reserva tu hotel</h3>
+
+        <DatePicker
+          selected={props.startDate}
+          onChange={(date) => props.setStartDate(date)}
+          selectsStart
+          startDate={props.startDate}
+          endDate={props.endDate}
+        />
+        <DatePicker
+          selected={props.endDate}
+          onChange={(date) => props.setEndDate(date)}
+          selectsEnd
+          startDate={props.startDate}
+          endDate={props.endDate}
+          minDate={props.startDate}
+        />
+
+        <button className='button' onClick={() => {
+          getHotelsWithDate(props.startDate, props.endDate).then(result => {
+            props.setHotels(result)
+          })
+          history.push("/users");
+        }}>ENVIA</button>
+      </div>
+
     </div>
   );
 };
@@ -58,4 +68,4 @@ const DatePicker = () =>{
     </>
   );
 };*/
-export default DatePicker;
+export default SearchBar;
