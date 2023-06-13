@@ -46,12 +46,10 @@ func (s *service) InsertUser(userDto dto.UserDto) (dto.UserDto, error) {
 	user.LastName = userDto.LastName
 	user.Email = userDto.Email
 	user.Password = userDto.Password
-	//user.Role = "Customer" --> vean
 
 	user = client.InsertUser(user)
 
 	userDto.Id = user.Id //crea id
-	//userDto.Role = user.Role //crea el rol
 
 	if user.Id == 0 {
 		return userDto, errors.New("error")
@@ -74,7 +72,6 @@ func (s *service) GetUserById(id int) (dto.UserDto, error) {
 	userDto.Name = user.Name
 	userDto.LastName = user.LastName
 	userDto.Email = user.Email
-	//userDto.Role = user.Role
 
 	return userDto, nil
 }
@@ -89,7 +86,6 @@ func (s *service) GetUsers() (dto.UsersDto, error) {
 		userDto.Name = user.Name
 		userDto.LastName = user.LastName
 		userDto.Email = user.Email
-		//userDto.Role = user.Role
 
 		usersDto = append(usersDto, userDto)
 	}
@@ -111,7 +107,6 @@ func (s *service) UserLogin(loginDto dto.UserDto) (dto.UserDto, error) {
 	loginDto.Id = user.Id
 	loginDto.Name = user.Name
 	loginDto.LastName = user.LastName
-	//loginDto.Role = user.Role
 	return loginDto, nil
 }
 
