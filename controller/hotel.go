@@ -22,7 +22,8 @@ func GetHotelById(c *gin.Context) {
 
 	if err != nil {
 		c.JSON(http.StatusNotFound, err.Error()) //CAMBIAR
-		return
+
+		return //c.JSON(err.Status(),err) posible solución
 	}
 	c.JSON(http.StatusOK, hotelDto)
 }
@@ -39,7 +40,7 @@ func GetHotels(c *gin.Context) {
 	c.JSON(http.StatusOK, hotelsDto)
 }
 
-func InsertHotel(c *gin.Context) {
+func InsertHotel(c *gin.Context) { // esto lo tiene distinto, lo tiene con verificación de admin
 	var hotelDto dto.HotelDto
 	err := c.BindJSON(&hotelDto)
 
@@ -50,11 +51,11 @@ func InsertHotel(c *gin.Context) {
 		return
 	}
 
-	userDto, er := service.Service.InsertHotel(hotelDto)
+	userDto, er := service.Service.InsertHotel(hotelDto) // en vez de userDto ver si es hotelDto
 	//Error del insert
 	if er != nil {
 		c.JSON(er.Status(), er)
 	}
 
-	c.JSON(http.StatusCreated, userDto)
+	c.JSON(http.StatusCreated, userDto) // vuelve a usar
 }

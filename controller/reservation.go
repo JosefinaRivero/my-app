@@ -27,8 +27,6 @@ func GetReservationById(c *gin.Context) {
 
 func GetReservations(c *gin.Context) {
 
-	var reservationsDto dto.ReservationsDto
-
 	reservationsDto, err := service.Service.GetReservations()
 
 	if err != nil {
@@ -71,6 +69,8 @@ func GetReservationsByHotel(c *gin.Context) {
 	c.JSON(http.StatusOK, hotelReservations)
 
 }
+
+//acá nos falta que haga las piezas disponibles y los errores de reservacion además de las reservaciones disponibles
 
 func InsertReservation(c *gin.Context) {
 	var reservationDto dto.ReservationDto

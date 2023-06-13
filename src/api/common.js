@@ -1,10 +1,3 @@
-
-import CONFIG from "../app.config.json"
-
-export const GetHotelsByIdAndDates = () => {
-    return invokeApi(CONFIG.BASEURL+"/hotels")
-}
-
 export const invokeApi = async (path, method, data) => {
 
     const url = path;
